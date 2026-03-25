@@ -1,91 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4D42CBVZ0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-X4D42CBVZ0');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>co-work Privacy Policy</title>
+    <title>Co-work Privacy Policy</title>
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+        }
+
+        :root {
+            color-scheme: light;
+            --bg: #f4f6f8;
+            --card: #ffffff;
+            --text: #1f2328;
+            --muted: #5b6470;
+            --line: #d9e0e7;
+            --accent: #12c99a;
+            --accent-dark: #0c8f6d;
+            --accent-soft: #e9fbf5;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f7;
+            background:
+                radial-gradient(circle at top, #edfdf8 0%, transparent 28%),
+                linear-gradient(180deg, #f8fafb 0%, var(--bg) 100%);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.65;
+        }
+
+        a {
+            color: var(--accent-dark);
         }
 
         .container {
-            max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            max-width: 920px;
+            padding: 28px 20px 56px;
         }
 
-        .header {
-            text-align: center;
-            margin-bottom: 50px;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        .hero {
+            background: linear-gradient(145deg, #0f1720 0%, #132d27 100%);
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(14, 25, 34, 0.16);
+            color: #f3f7f9;
+            margin-bottom: 24px;
+            overflow: hidden;
+            padding: 32px 28px;
+            position: relative;
+        }
+
+        .hero::after {
+            background: radial-gradient(circle, rgba(18, 201, 154, 0.24) 0%, rgba(18, 201, 154, 0) 70%);
+            content: "";
+            height: 240px;
+            position: absolute;
+            right: -40px;
+            top: -80px;
+            width: 240px;
+        }
+
+        .eyebrow {
+            color: rgba(255, 255, 255, 0.76);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
         }
 
         .app-name {
-            font-size: 48px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin-bottom: 10px;
+            font-size: 44px;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
         }
 
         .subtitle {
-            font-size: 18px;
-            color: #6e6e73;
+            color: rgba(255, 255, 255, 0.82);
+            font-size: 17px;
+            max-width: 640px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .toolbar {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+            margin-bottom: 20px;
         }
 
         .language-toggle {
-            text-align: center;
-            margin-bottom: 30px;
+            display: inline-flex;
+            gap: 10px;
         }
 
         .language-toggle button {
-            background: white;
-            border: 2px solid #007aff;
-            color: #007aff;
-            padding: 10px 30px;
-            margin: 0 10px;
-            border-radius: 20px;
-            font-size: 16px;
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            color: var(--muted);
             cursor: pointer;
-            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 11px 18px;
+            transition: 0.2s ease;
         }
 
         .language-toggle button.active {
-            background: #007aff;
-            color: white;
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #06251c;
         }
 
-        .language-toggle button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,122,255,0.3);
+        .meta-pill {
+            background: var(--accent-soft);
+            border: 1px solid #c8f1e4;
+            border-radius: 999px;
+            color: #0f6e55;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 10px 14px;
         }
 
         .content {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: var(--card);
+            border: 1px solid rgba(217, 224, 231, 0.9);
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(15, 23, 32, 0.06);
+            padding: 28px;
         }
 
         .section {
@@ -97,203 +148,307 @@
         }
 
         h1 {
-            font-size: 32px;
-            color: #1d1d1f;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #007aff;
-            padding-bottom: 10px;
+            font-size: 34px;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
         }
 
-        h2 {
-            font-size: 24px;
-            color: #1d1d1f;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #515154;
+        .lead {
+            color: var(--muted);
             font-size: 16px;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 10px;
-            color: #515154;
-        }
-
-        .highlight {
-            background: #f0f8ff;
-            padding: 20px;
-            border-left: 4px solid #007aff;
-            border-radius: 4px;
-            margin: 20px 0;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #6e6e73;
-            font-size: 14px;
+            margin-bottom: 22px;
         }
 
         .last-updated {
+            color: #6c7784;
+            font-size: 14px;
             font-style: italic;
-            color: #86868b;
-            margin-top: 30px;
+            margin-bottom: 22px;
+        }
+
+        .notice {
+            background: linear-gradient(180deg, #f3fdfa 0%, #ebfaf5 100%);
+            border: 1px solid #ccefe2;
+            border-radius: 18px;
+            margin-bottom: 24px;
+            padding: 18px 18px 16px;
+        }
+
+        .notice strong {
+            color: #0b6d53;
+        }
+
+        h2 {
+            font-size: 23px;
+            letter-spacing: -0.02em;
+            margin: 28px 0 12px;
+        }
+
+        p {
+            color: #39424d;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            margin: 0 0 14px 22px;
+        }
+
+        li {
+            color: #39424d;
+            margin-bottom: 10px;
+        }
+
+        .contact-card {
+            background: #f8fafb;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            margin-top: 24px;
+            padding: 18px;
+        }
+
+        .footer {
+            color: #6b7581;
+            font-size: 13px;
+            padding-top: 18px;
+            text-align: center;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 16px 14px 36px;
+            }
+
+            .hero {
+                border-radius: 20px;
+                padding: 24px 20px;
+            }
+
+            .app-name {
+                font-size: 34px;
+            }
+
+            .content {
+                border-radius: 20px;
+                padding: 22px 18px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="app-name">co-work</div>
-            <div class="subtitle">AI-Powered Collaboration Assistant</div>
+        <header class="hero">
+            <div class="eyebrow">Co-work Legal</div>
+            <div class="app-name">Co-work</div>
+            <div class="subtitle">Privacy information for the Co-work app and related subscription features.</div>
+        </header>
+
+        <div class="toolbar">
+            <div class="language-toggle">
+                <button class="active" onclick="switchLanguage('en', this)">English</button>
+                <button onclick="switchLanguage('zh', this)">中文</button>
+            </div>
+            <div class="meta-pill">Contact: <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a></div>
         </div>
 
-        <div class="language-toggle">
-            <button class="active" onclick="switchLanguage('en')">English</button>
-            <button onclick="switchLanguage('zh')">中文</button>
-        </div>
-
-        <div class="content">
-            <!-- English Version -->
-            <div id="en" class="section active">
+        <main class="content">
+            <section id="en" class="section active">
                 <h1>Privacy Policy</h1>
+                <p class="lead">This policy explains what information Co-work processes, why we process it, how subscription data is handled, and how you can request deletion or support.</p>
+                <p class="last-updated">Last Updated: March 26, 2026</p>
 
-                <p class="last-updated">Last Updated: January 15, 2026</p>
-
-                <h2>Overview</h2>
-                <p>co-work is a Mac application that provides AI-powered collaboration assistants. We are committed to protecting your privacy. This privacy policy explains how we handle information in our application.</p>
-
-                <div class="highlight">
-                    <strong>Key Point:</strong> co-work does NOT collect, store, or transmit any personal information or user data.
+                <div class="notice">
+                    <p><strong>Summary:</strong> Co-work uses an anonymous device-based account model. We process the content you submit to provide AI chat, assistants, image generation, feedback handling, and subscription verification.</p>
                 </div>
 
-                <h2>Information We Do NOT Collect</h2>
-                <p>co-work does not collect any of the following:</p>
+                <h2>1. Scope</h2>
+                <p>This Privacy Policy applies to the Co-work application, including its iOS, iPadOS, and macOS experiences, and the related backend services used to operate chats, assistants, image generation, feedback, and Apple auto-renewable subscriptions.</p>
+
+                <h2>2. Information We Process</h2>
+                <p>Depending on how you use the app, we may process the following categories of data:</p>
                 <ul>
-                    <li>Personal identification information (name, email, phone number, etc.)</li>
-                    <li>User account information (no login required)</li>
-                    <li>Payment information (the app is free)</li>
-                    <li>Device information or identifiers</li>
-                    <li>Usage data or analytics</li>
-                    <li>Location data</li>
-                    <li>Conversation history or content</li>
-                    <li>Any files or system resources from your device</li>
+                    <li>Anonymous account and device identifiers, such as a device-generated identifier stored locally and the internal user ID linked to it.</li>
+                    <li>Authentication and account state data, such as access tokens, membership status, points, and usage counters.</li>
+                    <li>Chat and assistant content, including prompts, conversation titles, message history, selected model, and assistant context needed to deliver the service.</li>
+                    <li>Uploaded content, including images you submit for vision or image-generation requests. For non-image files, the current service mainly processes file name and MIME-type context rather than full file body text.</li>
+                    <li>Image-generation request data, such as prompts, optional reference images, selected size, quality, and generated output returned to you.</li>
+                    <li>Feedback data, including the optional email address and message content you submit through the app.</li>
+                    <li>Subscription and purchase verification records, including Apple product identifiers, transaction IDs, original transaction IDs, signed transaction info or receipts, environment, expiration data, and the app account token used to match a purchase to your Co-work account.</li>
+                    <li>Security and abuse-prevention data, such as IP address and request metadata used for rate limiting, fraud prevention, reliability, and diagnostics.</li>
                 </ul>
 
-                <h2>How the App Works</h2>
-                <p>co-work provides multiple AI assistants (such as Product Manager, Developer, etc.) that you can interact with through conversations. All conversations are:</p>
+                <h2>3. How We Use Data</h2>
+                <p>We process data to operate and improve Co-work, including to:</p>
                 <ul>
-                    <li>Processed locally or through secure AI service providers</li>
-                    <li>Isolated from each other</li>
-                    <li>Not stored or logged by us</li>
-                    <li>Not shared with any third parties</li>
+                    <li>Create and maintain your anonymous in-app account.</li>
+                    <li>Deliver AI chat, assistant, and image-generation responses.</li>
+                    <li>Store and sync conversation history across sessions for the same anonymous account.</li>
+                    <li>Verify purchases, restore subscriptions, and update membership benefits.</li>
+                    <li>Respond to support and feedback requests.</li>
+                    <li>Protect the service against abuse, unauthorized use, and technical failures.</li>
+                    <li>Maintain service performance, debugging, and product reliability.</li>
                 </ul>
 
-                <h2>System Access</h2>
-                <p>co-work does not access any local files, folders, or system resources on your Mac. The app operates entirely within its own sandbox environment.</p>
+                <h2>4. Subscription and Payment Information</h2>
+                <p>Payments for subscriptions are processed by Apple through In-App Purchase. We do not receive your full payment card details. When you purchase, renew, or restore a subscription, we process the transaction data Apple provides to verify the purchase, apply the correct membership status, and maintain accounting, anti-fraud, and customer-support records.</p>
 
-                <h2>Third-Party Services</h2>
-                <p>co-work may use third-party AI service providers to power the AI assistants. Any data transmitted to these services is subject to their respective privacy policies. We do not control or have access to any data processed by these services.</p>
+                <h2>5. Sharing With Third Parties</h2>
+                <p>We may share limited data with service providers only as needed to operate Co-work:</p>
+                <ul>
+                    <li>AI processing providers used to generate chat and image responses.</li>
+                    <li>Apple, for in-app purchase processing, subscription verification, and subscription status notifications.</li>
+                    <li>Infrastructure, hosting, database, and security providers that help us run the service.</li>
+                </ul>
+                <p>We do not sell your personal information.</p>
 
-                <h2>Data Security</h2>
-                <p>Since we do not collect or store any user data, there is no user data at risk. All conversations are ephemeral and exist only during your active session.</p>
+                <h2>6. Data Retention</h2>
+                <p>We retain data for as long as reasonably necessary to provide the service, maintain subscription records, resolve disputes, prevent abuse, and comply with legal obligations.</p>
+                <ul>
+                    <li>Conversation history is retained until you delete it in the app or request account-associated deletion, unless we must keep limited records for legal or security reasons.</li>
+                    <li>Feedback submissions may be retained to respond to your request and maintain support history.</li>
+                    <li>Subscription verification and transaction records may be retained for accounting, fraud prevention, and compliance purposes.</li>
+                    <li>Security and rate-limiting metadata may be retained for a limited operational period.</li>
+                </ul>
 
-                <h2>Children's Privacy</h2>
-                <p>Our application does not collect any information from anyone, including children under the age of 13.</p>
+                <h2>7. Your Choices and Deletion Requests</h2>
+                <ul>
+                    <li>You can delete individual conversations from inside the app where that feature is available.</li>
+                    <li>You can request deletion of account-associated data by emailing <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a>.</li>
+                    <li>You can manage or cancel subscriptions in your Apple ID subscription settings.</li>
+                    <li>You may choose not to provide optional feedback email information, but some features require the content you submit in order to work.</li>
+                </ul>
 
-                <h2>Changes to This Privacy Policy</h2>
-                <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated "Last Updated" date.</p>
+                <h2>8. Data Security</h2>
+                <p>We use reasonable administrative and technical measures to protect the data we process. No system can guarantee absolute security, so please avoid submitting highly sensitive information unless necessary.</p>
 
-                <h2>Contact Us</h2>
-                <p>If you have any questions about this privacy policy, please contact us at:</p>
-                <p><strong>Email:</strong> ify0222yfi@gmail.com</p>
-            </div>
+                <h2>9. International Processing</h2>
+                <p>Your data may be processed in countries other than your own when required by our infrastructure, AI, or payment-related service providers.</p>
 
-            <!-- Chinese Version -->
-            <div id="zh" class="section">
+                <h2>10. Children's Privacy</h2>
+                <p>Co-work is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information to us, contact us so we can review and delete it where appropriate.</p>
+
+                <h2>11. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time. Material updates will be reflected on this page by changing the "Last Updated" date.</p>
+
+                <div class="contact-card">
+                    <h2>12. Contact Us</h2>
+                    <p>For privacy questions, support, or deletion requests, contact:</p>
+                    <p><strong>Email:</strong> <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a></p>
+                </div>
+            </section>
+
+            <section id="zh" class="section">
                 <h1>隐私政策</h1>
+                <p class="lead">本政策说明 Co-work 会处理哪些信息、处理目的是什么、订阅数据如何处理，以及你如何申请删除数据或联系支持。</p>
+                <p class="last-updated">最后更新日期：2026 年 3 月 26 日</p>
 
-                <p class="last-updated">最后更新日期：2026年1月15日</p>
-
-                <h2>概述</h2>
-                <p>co-work 是一款提供 AI 智能协作助手的 Mac 应用程序。我们致力于保护您的隐私。本隐私政策说明了我们如何处理应用程序中的信息。</p>
-
-                <div class="highlight">
-                    <strong>重点：</strong>co-work 不会收集、存储或传输任何个人信息或用户数据。
+                <div class="notice">
+                    <p><strong>摘要：</strong>Co-work 采用匿名设备账号模式。为了提供 AI 对话、助手、图像生成、反馈处理和订阅验证服务，我们会处理你主动提交的内容以及必要的技术和交易信息。</p>
                 </div>
 
-                <h2>我们不收集的信息</h2>
-                <p>co-work 不收集以下任何信息：</p>
+                <h2>1. 适用范围</h2>
+                <p>本隐私政策适用于 Co-work 应用及相关后台服务，包括 iOS、iPadOS、macOS 版本，以及用于提供聊天、助手、图像生成、反馈、Apple 自动续费订阅等功能的服务。</p>
+
+                <h2>2. 我们处理的信息</h2>
+                <p>根据你的使用方式，我们可能处理以下类别的信息：</p>
                 <ul>
-                    <li>个人身份信息（姓名、电子邮件、电话号码等）</li>
-                    <li>用户账户信息（无需登录）</li>
-                    <li>支付信息（应用免费）</li>
-                    <li>设备信息或标识符</li>
-                    <li>使用数据或分析数据</li>
-                    <li>位置数据</li>
-                    <li>对话历史或内容</li>
-                    <li>您设备上的任何文件或系统资源</li>
+                    <li>匿名账号和设备标识，例如本地生成并保存的设备标识，以及与其绑定的内部用户 ID。</li>
+                    <li>鉴权和账号状态信息，例如访问令牌、会员状态、积分和使用计数。</li>
+                    <li>聊天和助手内容，包括你提交的提示词、会话标题、消息历史、所选模型，以及完成服务所需的助手上下文。</li>
+                    <li>上传内容，包括你为视觉对话或图像生成提交的图片。对于非图片文件，当前服务主要处理文件名和 MIME 类型上下文，而不是完整文件正文。</li>
+                    <li>图像生成请求数据，例如提示词、可选参考图片、所选尺寸、质量参数以及返回给你的生成结果。</li>
+                    <li>反馈数据，包括你在应用内提交的可选邮箱地址和反馈内容。</li>
+                    <li>订阅和购买验证记录，包括 Apple 商品标识、交易号、原始交易号、签名交易信息或回执、环境信息、到期信息，以及用于将购买绑定到 Co-work 账号的 app account token。</li>
+                    <li>安全和风控数据，例如用于限流、防滥用、稳定性和问题排查的 IP 地址及请求元数据。</li>
                 </ul>
 
-                <h2>应用工作原理</h2>
-                <p>co-work 提供多个 AI 助手（如产品经理、开发者等），您可以通过对话与它们互动。所有对话都是：</p>
+                <h2>3. 我们如何使用这些信息</h2>
+                <p>我们处理这些信息是为了运行和改进 Co-work，具体包括：</p>
                 <ul>
-                    <li>在本地或通过安全的 AI 服务提供商处理</li>
-                    <li>彼此隔离</li>
-                    <li>不被我们存储或记录</li>
-                    <li>不与任何第三方共享</li>
+                    <li>创建并维护你的匿名应用内账号。</li>
+                    <li>提供 AI 对话、助手和图像生成功能。</li>
+                    <li>为同一匿名账号保存并同步会话历史。</li>
+                    <li>验证购买、恢复订阅并更新会员权益。</li>
+                    <li>响应支持和反馈请求。</li>
+                    <li>防止滥用、未授权使用和技术故障。</li>
+                    <li>维护服务性能、调试能力和产品稳定性。</li>
                 </ul>
 
-                <h2>系统访问</h2>
-                <p>co-work 不访问您 Mac 上的任何本地文件、文件夹或系统资源。该应用完全在其自己的沙盒环境中运行。</p>
+                <h2>4. 订阅和支付信息</h2>
+                <p>订阅支付由 Apple 通过应用内购买完成。我们不会接收你的完整银行卡支付信息。当你购买、续费或恢复订阅时，我们会处理 Apple 提供的交易数据，用于验证购买、同步正确的会员状态，并保留必要的记账、风控和客服支持记录。</p>
 
-                <h2>第三方服务</h2>
-                <p>co-work 可能使用第三方 AI 服务提供商来支持 AI 助手功能。传输到这些服务的任何数据均受其各自隐私政策的约束。我们不控制也无法访问这些服务处理的任何数据。</p>
+                <h2>5. 与第三方的共享</h2>
+                <p>我们只会在运营 Co-work 所必需的范围内，与服务提供商共享有限数据：</p>
+                <ul>
+                    <li>用于生成聊天和图像结果的 AI 处理服务提供商。</li>
+                    <li>Apple，用于应用内购买处理、订阅验证和订阅状态通知。</li>
+                    <li>帮助我们运行服务的基础设施、托管、数据库和安全服务提供商。</li>
+                </ul>
+                <p>我们不会出售你的个人信息。</p>
 
-                <h2>数据安全</h2>
-                <p>由于我们不收集或存储任何用户数据，因此不存在用户数据风险。所有对话都是临时的，仅在您的活动会话期间存在。</p>
+                <h2>6. 数据保留</h2>
+                <p>我们会在提供服务、维护订阅记录、解决争议、防止滥用和履行法律义务所合理需要的期限内保留数据。</p>
+                <ul>
+                    <li>会话历史会保留到你在应用内删除，或你提出关联账号删除请求为止；但在法律或安全需要的范围内，我们可能保留有限记录。</li>
+                    <li>反馈提交内容可能会保留，用于回复你的请求并维护支持历史。</li>
+                    <li>订阅验证和交易记录可能会出于记账、反欺诈和合规目的继续保留。</li>
+                    <li>安全和限流相关元数据可能会保留一段有限的运营周期。</li>
+                </ul>
 
-                <h2>儿童隐私</h2>
-                <p>我们的应用程序不收集任何人的信息，包括13岁以下的儿童。</p>
+                <h2>7. 你的选择与删除申请</h2>
+                <ul>
+                    <li>在应用支持该功能的地方，你可以直接删除单条会话。</li>
+                    <li>你可以发送邮件到 <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a> 申请删除与你账号关联的数据。</li>
+                    <li>你可以在 Apple ID 的订阅设置中管理或取消订阅。</li>
+                    <li>你可以选择不填写可选的反馈邮箱，但某些功能必须处理你提交的内容才能正常工作。</li>
+                </ul>
 
-                <h2>隐私政策的变更</h2>
-                <p>我们可能会不时更新本隐私政策。任何更改都将反映在此页面上，并更新"最后更新日期"。</p>
+                <h2>8. 数据安全</h2>
+                <p>我们会采取合理的管理和技术措施来保护所处理的数据。但任何系统都无法保证绝对安全，因此除非确有必要，请不要提交高度敏感的信息。</p>
 
-                <h2>联系我们</h2>
-                <p>如果您对本隐私政策有任何疑问，请通过以下方式联系我们：</p>
-                <p><strong>电子邮件：</strong>ify0222yfi@gmail.com</p>
+                <h2>9. 跨境处理</h2>
+                <p>当基础设施、AI 服务或支付相关服务提供商有需要时，你的数据可能会在你所在国家或地区之外被处理。</p>
+
+                <h2>10. 儿童隐私</h2>
+                <p>Co-work 并非面向 13 岁以下儿童，我们也不会故意收集 13 岁以下儿童的个人信息。如果你认为儿童向我们提供了个人信息，请联系我们，以便我们进行审核并在适当情况下删除相关信息。</p>
+
+                <h2>11. 政策更新</h2>
+                <p>我们可能会不时更新本隐私政策。如有重要更新，我们会通过修改本页面的“最后更新日期”进行反映。</p>
+
+                <div class="contact-card">
+                    <h2>12. 联系我们</h2>
+                    <p>如果你对隐私、支持或数据删除申请有任何问题，请联系：</p>
+                    <p><strong>邮箱：</strong> <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a></p>
+                </div>
+            </section>
+
+            <div class="footer">
+                <p>&copy; 2026 Co-work. All rights reserved.</p>
             </div>
-        </div>
-
-        <div class="footer">
-            <p>&copy; 2026 co-work. All rights reserved.</p>
-        </div>
+        </main>
     </div>
 
     <script>
-        function switchLanguage(lang) {
-            // Hide all sections
-            document.querySelectorAll('.section').forEach(section => {
-                section.classList.remove('active');
-            });
+        function switchLanguage(lang, button) {
+            document.documentElement.lang = lang === "zh" ? "zh-CN" : "en";
 
-            // Show selected section
-            document.getElementById(lang).classList.add('active');
-
-            // Update button states
-            document.querySelectorAll('.language-toggle button').forEach(button => {
-                button.classList.remove('active');
+            document.querySelectorAll(".section").forEach((section) => {
+                section.classList.remove("active");
             });
-            event.target.classList.add('active');
+            document.getElementById(lang).classList.add("active");
+
+            document.querySelectorAll(".language-toggle button").forEach((item) => {
+                item.classList.remove("active");
+            });
+            button.classList.add("active");
         }
     </script>
 </body>
