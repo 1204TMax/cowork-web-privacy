@@ -13,23 +13,23 @@
 
         :root {
             color-scheme: light;
-            --bg: #f4f6f8;
+            --bg: #f7f5f3;
             --card: #ffffff;
             --text: #1f2328;
-            --muted: #5b6470;
-            --line: #d9e0e7;
-            --accent: #12c99a;
-            --accent-dark: #0c8f6d;
-            --accent-soft: #e9fbf5;
+            --muted: #5b6068;
+            --line: #e4ddd7;
+            --accent: #d05f45;
+            --accent-dark: #b44b33;
+            --accent-soft: #fdf2ee;
         }
 
         body {
             background:
-                radial-gradient(circle at top, #edfdf8 0%, transparent 28%),
-                linear-gradient(180deg, #f8fafb 0%, var(--bg) 100%);
+                radial-gradient(circle at top, #fff2ec 0%, transparent 30%),
+                linear-gradient(180deg, #faf8f6 0%, var(--bg) 100%);
             color: var(--text);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.65;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            line-height: 1.68;
         }
 
         a {
@@ -43,100 +43,85 @@
         }
 
         .hero {
-            background: linear-gradient(145deg, #0f1720 0%, #132d27 100%);
-            border-radius: 24px;
-            box-shadow: 0 20px 50px rgba(14, 25, 34, 0.16);
-            color: #f3f7f9;
-            margin-bottom: 24px;
-            overflow: hidden;
+            background: linear-gradient(135deg, #271b18 0%, #3d241c 100%);
+            border-radius: 20px;
+            color: #ffffff;
             padding: 32px 28px;
-            position: relative;
-        }
-
-        .hero::after {
-            background: radial-gradient(circle, rgba(18, 201, 154, 0.24) 0%, rgba(18, 201, 154, 0) 70%);
-            content: "";
-            height: 240px;
-            position: absolute;
-            right: -40px;
-            top: -80px;
-            width: 240px;
+            margin-bottom: 20px;
+            box-shadow: 0 12px 32px rgba(39, 27, 24, 0.14);
         }
 
         .eyebrow {
-            color: rgba(255, 255, 255, 0.76);
+            color: #f3a48e;
             font-size: 13px;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 0.08em;
-            margin-bottom: 10px;
             text-transform: uppercase;
+            margin-bottom: 8px;
         }
 
         .app-name {
-            font-size: 44px;
-            font-weight: 800;
-            letter-spacing: -0.04em;
+            font-size: 32px;
+            font-weight: 700;
             margin-bottom: 8px;
-            position: relative;
-            z-index: 1;
         }
 
         .subtitle {
-            color: rgba(255, 255, 255, 0.82);
-            font-size: 17px;
-            max-width: 640px;
-            position: relative;
-            z-index: 1;
+            color: #e6dad5;
+            font-size: 16px;
         }
 
         .toolbar {
-            align-items: center;
             display: flex;
             flex-wrap: wrap;
-            gap: 12px;
+            align-items: center;
             justify-content: space-between;
+            gap: 12px;
             margin-bottom: 20px;
         }
 
         .language-toggle {
             display: inline-flex;
-            gap: 10px;
+            background: #ebe5e0;
+            border-radius: 10px;
+            padding: 4px;
+            gap: 4px;
         }
 
         .language-toggle button {
+            appearance: none;
+            background: transparent;
+            border: none;
+            border-radius: 8px;
+            color: var(--muted);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 16px;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .language-toggle button.active {
+            background: var(--card);
+            color: var(--text);
+            box-shadow: 0 2px 6px rgba(31, 35, 40, 0.08);
+        }
+
+        .meta-pill {
             background: var(--card);
             border: 1px solid var(--line);
             border-radius: 999px;
             color: var(--muted);
-            cursor: pointer;
-            font-size: 14px;
-            font-weight: 700;
-            padding: 11px 18px;
-            transition: 0.2s ease;
-        }
-
-        .language-toggle button.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: #06251c;
-        }
-
-        .meta-pill {
-            background: var(--accent-soft);
-            border: 1px solid #c8f1e4;
-            border-radius: 999px;
-            color: #0f6e55;
             font-size: 13px;
-            font-weight: 700;
-            padding: 10px 14px;
+            padding: 7px 14px;
         }
 
         .content {
             background: var(--card);
-            border: 1px solid rgba(217, 224, 231, 0.9);
-            border-radius: 24px;
-            box-shadow: 0 10px 30px rgba(15, 23, 32, 0.06);
-            padding: 28px;
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 36px 32px;
+            box-shadow: 0 10px 28px rgba(31, 35, 40, 0.05);
         }
 
         .section {
@@ -148,97 +133,111 @@
         }
 
         h1 {
-            font-size: 34px;
-            letter-spacing: -0.03em;
-            margin-bottom: 8px;
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
         .lead {
             color: var(--muted);
             font-size: 16px;
-            margin-bottom: 22px;
+            margin-bottom: 10px;
         }
 
         .last-updated {
-            color: #6c7784;
+            color: var(--muted);
             font-size: 14px;
-            font-style: italic;
-            margin-bottom: 22px;
+            margin-bottom: 24px;
         }
 
         .notice {
-            background: linear-gradient(180deg, #f3fdfa 0%, #ebfaf5 100%);
-            border: 1px solid #ccefe2;
-            border-radius: 18px;
-            margin-bottom: 24px;
-            padding: 18px 18px 16px;
+            background: var(--accent-soft);
+            border: 1px solid #f2cec2;
+            border-radius: 14px;
+            padding: 16px 18px;
+            margin-bottom: 28px;
         }
 
-        .notice strong {
-            color: #0b6d53;
+        .notice p {
+            margin: 0;
         }
 
         h2 {
-            font-size: 23px;
-            letter-spacing: -0.02em;
-            margin: 28px 0 12px;
+            font-size: 21px;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+        }
+
+        h3 {
+            font-size: 16px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        h2:first-of-type {
+            border-top: none;
+            margin-top: 8px;
+            padding-top: 0;
         }
 
         p {
-            color: #39424d;
-            font-size: 16px;
             margin-bottom: 12px;
         }
 
         ul {
-            margin: 0 0 14px 22px;
+            margin: 10px 0 16px 22px;
         }
 
         li {
-            color: #39424d;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .contact-card {
-            background: #f8fafb;
+            background: #faf8f6;
             border: 1px solid var(--line);
-            border-radius: 18px;
-            margin-top: 24px;
-            padding: 18px;
+            border-radius: 14px;
+            padding: 18px 20px;
+            margin-top: 14px;
+        }
+
+        .contact-card p:last-child {
+            margin-bottom: 0;
         }
 
         .footer {
-            color: #6b7581;
+            color: var(--muted);
             font-size: 13px;
-            padding-top: 18px;
             text-align: center;
+            margin-top: 28px;
+            padding-top: 18px;
+            border-top: 1px solid var(--line);
         }
 
         @media (max-width: 640px) {
             .container {
-                padding: 16px 14px 36px;
+                padding: 16px 14px 40px;
             }
 
             .hero {
-                border-radius: 20px;
                 padding: 24px 20px;
             }
 
             .app-name {
-                font-size: 34px;
+                font-size: 26px;
             }
 
             .content {
-                border-radius: 20px;
-                padding: 22px 18px;
+                padding: 24px 18px;
             }
 
             h1 {
-                font-size: 28px;
+                font-size: 24px;
             }
 
             h2 {
-                font-size: 21px;
+                font-size: 19px;
             }
         }
     </style>
@@ -248,13 +247,13 @@
         <header class="hero">
             <div class="eyebrow">Co-work Legal</div>
             <div class="app-name">Co-work</div>
-            <div class="subtitle">Privacy information for the Co-work app and related subscription features.</div>
+            <div class="subtitle">Privacy information for Co-work on iOS, iPadOS, and macOS and its related services.</div>
         </header>
 
         <div class="toolbar">
             <div class="language-toggle">
-                <button class="active" onclick="switchLanguage('en', this)">English</button>
-                <button onclick="switchLanguage('zh', this)">中文</button>
+                <button id="btn-en" class="active" onclick="switchLanguage('en', this)">English</button>
+                <button id="btn-zh" onclick="switchLanguage('zh', this)">中文</button>
             </div>
             <div class="meta-pill">Contact: <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a></div>
         </div>
@@ -262,176 +261,258 @@
         <main class="content">
             <section id="en" class="section active">
                 <h1>Privacy Policy</h1>
-                <p class="lead">This policy explains what information Co-work processes, why we process it, how subscription data is handled, and how you can request deletion or support.</p>
-                <p class="last-updated">Last Updated: July 5, 2026</p>
+                <p class="lead">This policy explains what information Co-work processes, which third-party services we work with, how AI data sharing consent and content reporting work, and how you can manage or delete your data.</p>
+                <p class="last-updated">Last Updated: November 25, 2026</p>
 
                 <div class="notice">
-                    <p><strong>Summary:</strong> Co-work uses an anonymous device-based account model. We process the content you submit to provide AI chat, Mac Agent tasks, assistants, image generation, feedback handling, points, and subscription verification.</p>
+                    <p><strong>Summary:</strong> Co-work uses an anonymous device-based account model. Before sending your first AI request, Co-work asks for your explicit permission to share your submitted prompts, files, images, and necessary context with third-party AI relay services and model providers. You can review or revoke this permission at any time in the app. We do not sell your personal information or track you across third-party apps or websites.</p>
                 </div>
 
                 <h2>1. Scope</h2>
-                <p>This Privacy Policy applies to the Co-work application, including its iOS, iPadOS, and macOS experiences, and the related backend services used to operate chats, Mac Agent tasks, assistants, image generation, feedback, points, and Apple auto-renewable subscriptions.</p>
+                <p>This Privacy Policy applies to the Co-work applications on iOS, iPadOS, and macOS (including App Store and direct macOS editions) and the related backend services used to operate AI chat, web search, webpage reading and document parsing, Mac Agent tasks, assistants, image generation, content reporting, feedback, credits, and Apple auto-renewable subscriptions.</p>
 
                 <h2>2. Information We Process</h2>
-                <p>Depending on how you use the app, we may process the following categories of data:</p>
+                <p>Depending on the features you use, we may process the following categories of data:</p>
                 <ul>
-                    <li>Anonymous account and device identifiers, such as a device-generated identifier stored locally and the internal user ID linked to it.</li>
-                    <li>Authentication and account state data, such as access tokens, membership status, points, and usage counters.</li>
-                    <li>Chat and assistant content, including prompts, conversation titles, message history, selected model, and assistant context needed to deliver the service.</li>
-                    <li>Mac Agent task content, including the task instructions you submit, selected workspace, permission mode, tool or command outputs, local file paths, file names, metadata, and relevant file content when you ask the Agent to inspect, summarize, edit, or create files.</li>
-                    <li>Uploaded or referenced content, including images you submit for vision or image-generation requests, reference images, and files or folders you choose or instruct the Mac Agent to process.</li>
-                    <li>Image-generation request data, such as prompts, optional reference images, selected size, quality, and generated output returned to you.</li>
-                    <li>Local app settings stored on your device, such as selected language, selected model, workspace, work mode, and permission preference.</li>
-                    <li>Feedback data, including the optional email address and message content you submit through the app.</li>
-                    <li>Subscription and purchase verification records, including Apple product identifiers, transaction IDs, original transaction IDs, signed transaction info or receipts, environment, expiration data, and the app account token used to match a purchase to your Co-work account.</li>
-                    <li>Security and abuse-prevention data, such as IP address and request metadata used for rate limiting, fraud prevention, reliability, and diagnostics.</li>
+                    <li><strong>Anonymous account and device identifiers:</strong> a locally generated device identifier, the internal anonymous user ID linked to it, and authentication tokens.</li>
+                    <li><strong>Account, membership, and credits state:</strong> membership tier, credit balances, usage counters, and billing ledger records.</li>
+                    <li><strong>Chat, search, and document content:</strong> prompts, conversation titles, message history, selected model, assistant context, URLs you ask AI to read, attached images or documents (such as PDF, Word, or PowerPoint files), and AI responses returned to you.</li>
+                    <li><strong>Voice input (iOS):</strong> when you use microphone dictation on iOS, audio is processed through Apple's system Speech Recognition framework to transcribe speech into text before you choose to send it.</li>
+                    <li><strong>Mac Agent task content:</strong> task instructions you submit, selected workspace, permission preferences, tool or command outputs, local file paths, metadata, and relevant file content only when you select or authorize the Agent to inspect, summarize, edit, or create files. Local workspace files remain on your Mac unless sent as part of an authorized task.</li>
+                    <li><strong>Image generation data:</strong> prompts, optional reference images, size, resolution, quality parameters, and generated outputs.</li>
+                    <li><strong>Content reports and feedback:</strong> report target metadata, selected report reason, optional details, optional excerpt of the reported AI output, the generated ticket ID (<code>CR-...</code>), and feedback messages with any optional email address you provide.</li>
+                    <li><strong>Local app settings:</strong> language preference, selected model, AI data sharing preference, workspace settings, and permission choices stored on your device.</li>
+                    <li><strong>Subscription and purchase verification records:</strong> Apple product identifiers, transaction IDs, original transaction IDs, signed transaction information or receipts, environment, expiration data, and the app account token used to associate a purchase with your anonymous account. We do not receive your full payment card details.</li>
+                    <li><strong>Push notification tokens (iOS):</strong> in iOS release builds, if you enable notifications, we process your Apple Push Notification service (APNs) device token to notify you when background replies finish.</li>
+                    <li><strong>Product analytics and security data:</strong> privacy-safe product interaction events, membership status, app diagnostics, IP address, and request metadata used for rate limiting, request signing, fraud prevention, and service reliability. Chat prompts, AI replies, and user file contents are never sent to product analytics tools.</li>
                 </ul>
 
                 <h2>3. How We Use Data</h2>
-                <p>We process data to operate and improve Co-work, including to:</p>
+                <p>We process data strictly to operate, secure, and improve Co-work, including to:</p>
                 <ul>
-                    <li>Create and maintain your anonymous in-app account.</li>
-                    <li>Deliver AI chat, assistant, Mac Agent, file-processing, and image-generation responses.</li>
-                    <li>Store and sync conversation history across sessions for the same anonymous account.</li>
-                    <li>Verify purchases, restore subscriptions, and update membership benefits.</li>
-                    <li>Respond to support and feedback requests.</li>
-                    <li>Protect the service against abuse, unauthorized use, and technical failures.</li>
-                    <li>Maintain service performance, debugging, and product reliability.</li>
+                    <li>Create and maintain your anonymous account, membership entitlements, and credit balance.</li>
+                    <li>Deliver AI chat, grounded web search, webpage reading, document parsing, assistant, Mac Agent, and image-generation features after you grant AI data sharing permission.</li>
+                    <li>Store and sync conversation history and generated results for your anonymous account.</li>
+                    <li>Process AI content reports, immediately remove reported outputs from your history, and exclude reported replies from subsequent AI model context.</li>
+                    <li>Verify purchases, restore subscriptions, handle renewals, and maintain accounting and anti-fraud records.</li>
+                    <li>Send reply-completion push notifications on iOS when enabled.</li>
+                    <li>Measure product performance, diagnose crashes or errors, prevent abuse, and respond to support or deletion requests.</li>
                 </ul>
 
                 <h2>4. Subscription and Payment Information</h2>
-                <p>Payments for subscriptions are processed by Apple through In-App Purchase. We do not receive your full payment card details. When you purchase, renew, or restore a subscription, we process the transaction data Apple provides to verify the purchase, apply the correct membership status, and maintain accounting, anti-fraud, and customer-support records.</p>
+                <p>Subscription payments are processed by Apple through In-App Purchase. We do not receive your full payment card details. When you purchase, renew, upgrade, or restore a subscription, we process the transaction records Apple provides to verify the purchase, apply membership benefits, and maintain accounting, anti-fraud, and support records.</p>
 
-                <h2>5. Sharing With Third Parties</h2>
-                <p>We may share limited data with service providers only as needed to operate Co-work:</p>
+                <h2>5. Third-Party Services and Data Sharing</h2>
+                <p>We share data with third-party service providers only to the extent necessary to deliver the specific features you use:</p>
+
+                <h3>5.1 AI Relay Services and Model Providers</h3>
+                <p>Only after you explicitly allow AI data sharing in the app, the prompts, necessary conversation context, selected images or files, URLs, and task parameters you submit pass through Co-work's backend and may be sent to the following third-party services depending on the model or feature you choose:</p>
                 <ul>
-                    <li>AI processing providers used to generate chat, Agent, file-processing, and image responses.</li>
-                    <li>Apple, for in-app purchase processing, subscription verification, and subscription status notifications.</li>
-                    <li>Infrastructure, hosting, database, and security providers that help us run the service.</li>
+                    <li><strong>API Relay Services (3):</strong>
+                        <ul>
+                            <li><strong>ZenMux</strong> (<a href="https://zenmux.ai" target="_blank" rel="noopener noreferrer">zenmux.ai</a>): routes chat, grounded web search, and Mac Agent requests for supported models.</li>
+                            <li><strong>OpenRouter</strong> (<a href="https://openrouter.ai" target="_blank" rel="noopener noreferrer">openrouter.ai</a>): routes supported chat and grounded web search requests according to service configuration and region.</li>
+                            <li><strong>Kie.ai (NEXUSAI SERVICES LLC)</strong> (<a href="https://kie.ai" target="_blank" rel="noopener noreferrer">kie.ai</a>): processes AI image generation (such as GPT Image 2) and uploaded reference images.</li>
+                        </ul>
+                    </li>
+                    <li><strong>AI Model Providers (8):</strong>
+                        <ul>
+                            <li><strong>Via relay services:</strong> <strong>OpenAI</strong> (GPT chat and image models), <strong>Anthropic</strong> (Claude chat and Agent models), and <strong>Google</strong> (Gemini models and grounded web search).</li>
+                            <li><strong>Direct backend integrations:</strong> <strong>DeepSeek</strong> (chat, Mac Agent, webpage fetching, and document OCR/parsing), <strong>Zhipu AI</strong> (GLM models), <strong>Moonshot AI</strong> (Kimi models), <strong>MiniMax</strong> (MiniMax models), and <strong>Xiaomi</strong> (MiMo models).</li>
+                        </ul>
+                    </li>
                 </ul>
-                <p>We do not sell your personal information.</p>
+                <p>These providers receive your request data solely to generate your requested responses, search summaries, parsed document content, images, or Agent outputs. We review provider data-protection terms and do not authorize them to use your data for cross-company advertising. Please avoid submitting highly sensitive personal information that is unnecessary for your task.</p>
 
-                <h2>6. Data Retention</h2>
-                <p>We retain data for as long as reasonably necessary to provide the service, maintain subscription records, resolve disputes, prevent abuse, and comply with legal obligations.</p>
+                <h3>5.2 Apple Services</h3>
                 <ul>
-                    <li>Conversation history is retained until you delete it in the app or request account-associated deletion, unless we must keep limited records for legal or security reasons.</li>
-                    <li>Generated image records and Agent task records may be retained as part of conversation or task history until deletion is requested or supported in the app.</li>
-                    <li>Feedback submissions may be retained to respond to your request and maintain support history.</li>
-                    <li>Subscription verification and transaction records may be retained for accounting, fraud prevention, and compliance purposes.</li>
-                    <li>Security and rate-limiting metadata may be retained for a limited operational period.</li>
+                    <li><strong>App Store &amp; StoreKit:</strong> for In-App Purchase processing, subscription verification, restoration, and subscription status notifications.</li>
+                    <li><strong>Apple Push Notification service (APNs):</strong> for delivering background reply notifications on iOS release builds when you grant notification permission.</li>
+                    <li><strong>Apple Speech Recognition:</strong> for transcribing voice input to text on iOS when you use microphone dictation.</li>
                 </ul>
 
-                <h2>7. Your Choices and Deletion Requests</h2>
+                <h3>5.3 Analytics Services</h3>
                 <ul>
-                    <li>You can delete individual conversations from inside the app where that feature is available.</li>
-                    <li>You can request deletion of account-associated data by emailing <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a>.</li>
-                    <li>You can manage or cancel subscriptions in your Apple ID subscription settings.</li>
-                    <li>You may choose not to provide optional feedback email information, but some features require the content you submit in order to work.</li>
+                    <li><strong>Google Firebase Analytics (iOS release builds):</strong> used in iOS App Store builds to record app usage events (such as screen views, feature interactions, and membership state) and measure stability. Prompts, chat messages, AI outputs, and file contents are never sent to Firebase Analytics.</li>
+                    <li><strong>Co-work First-Party Analytics:</strong> privacy-safe product interaction events and error diagnostics sent to Co-work's own backend (excluding prompts, chat text, and file contents). On macOS, optional product analytics is off by default for new users and can be controlled in Settings.</li>
                 </ul>
 
-                <h2>8. Data Security</h2>
-                <p>We use reasonable administrative and technical measures to protect the data we process. No system can guarantee absolute security, so please avoid submitting highly sensitive information unless necessary.</p>
+                <h3>5.4 Cloud Infrastructure &amp; Legal Requirements</h3>
+                <ul>
+                    <li><strong>Cloudflare:</strong> hosts Co-work's backend services (Workers), operational databases (D1), attachment and image storage (R2), and edge security/routing.</li>
+                    <li><strong>Legal or safety compliance:</strong> we may disclose limited information when required by applicable law, lawful process, or to protect user and service safety.</li>
+                </ul>
+                <p><strong>We do not sell your personal information and do not use collected data for cross-app advertising tracking.</strong></p>
 
-                <h2>9. International Processing</h2>
-                <p>Your data may be processed in countries other than your own when required by our infrastructure, AI, or payment-related service providers.</p>
+                <h2>6. AI Data Sharing Controls &amp; Content Reporting</h2>
+                <ul>
+                    <li><strong>Explicit AI consent and revocation:</strong> before your first AI request, Co-work displays a consent prompt explaining what data is sent and which third-party AI providers may receive it. You can decline without losing access to app settings or subscription management, and you can review or revoke permission at any time in <strong>iOS (Profile &rarr; Data Sharing)</strong> or <strong>macOS (Settings &rarr; Privacy)</strong>. When turned off, no new prompts, images, or files are sent to AI providers until you allow again.</li>
+                    <li><strong>Reporting and removing AI outputs:</strong> every AI text reply, Agent reply, and generated image provides a Report option. Once submitted, the reported item is immediately replaced in your view with a removal notice and ticket ID (<code>CR-...</code>), remains removed across refreshes and restarts, and is excluded from future AI model context. On macOS, reporting an Agent reply never modifies or deletes files in your local workspace.</li>
+                </ul>
 
-                <h2>10. Children's Privacy</h2>
-                <p>Co-work is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information to us, contact us so we can review and delete it where appropriate.</p>
+                <h2>7. Data Retention &amp; Deletion</h2>
+                <p>We retain data only for as long as reasonably necessary to provide the service, maintain subscription records, handle content reports, prevent abuse, and meet legal obligations:</p>
+                <ul>
+                    <li>Conversation history, generated image records, and Agent task records are retained until you delete them in the app or request account deletion.</li>
+                    <li>Content report records and feedback submissions are retained for safety review, abuse prevention, and support tracking.</li>
+                    <li>Subscription verification, billing, and anti-fraud records may be retained for accounting and compliance purposes.</li>
+                    <li>If you delete an anonymous account that still has an active Apple subscription, we retain only irreversible HMAC fingerprints of the original transaction ID and app account token so you can restore valid entitlements to a new anonymous account. These fingerprints contain no raw transaction IDs, chats, or files and are marked used after restoration.</li>
+                    <li>Security and rate-limiting metadata is retained for a limited operational period.</li>
+                </ul>
 
-                <h2>11. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy from time to time. Material updates will be reflected on this page by changing the "Last Updated" date.</p>
+                <h2>8. Your Choices and Deletion Requests</h2>
+                <ul>
+                    <li>You can enable or turn off third-party AI data sharing at any time in the app settings.</li>
+                    <li>You can report and remove any AI-generated message or image directly in the app.</li>
+                    <li>You can delete individual conversations in the app, and on macOS you can also initiate anonymous account deletion in <strong>Settings &rarr; Account</strong>.</li>
+                    <li>You can request deletion of account-associated data or ask privacy questions by emailing <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a> (please include your in-app anonymous user/device ID if available; never email passwords or payment card numbers).</li>
+                    <li>You can manage or cancel subscriptions in <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener noreferrer">Apple Subscription Settings</a>.</li>
+                </ul>
+
+                <h2>9. Data Security</h2>
+                <p>We apply reasonable technical and administrative safeguards, including encrypted transport (HTTPS/TLS), signed API requests, and strict access controls. No system is completely secure, so please avoid submitting highly sensitive personal data unless necessary.</p>
+
+                <h2>10. International Processing</h2>
+                <p>Because our cloud infrastructure and third-party AI and payment service providers operate across multiple regions, your data may be processed outside your country or region of residence.</p>
+
+                <h2>11. Children's Privacy</h2>
+                <p>Co-work is not directed to children under 13, and we do not knowingly collect personal information from children under 13. If you believe a child has provided personal information to us, please contact us so we can review and delete it appropriately.</p>
+
+                <h2>12. Changes to This Policy</h2>
+                <p>We may update this Privacy Policy as our product, service providers, or legal requirements evolve. Updates are reflected by revising the "Last Updated" date at the top of this page, and material changes will be highlighted where appropriate.</p>
 
                 <div class="contact-card">
-                    <h2>12. Contact Us</h2>
-                    <p>For privacy questions, support, or deletion requests, contact:</p>
+                    <h2>13. Contact Us</h2>
+                    <p>For privacy questions, support, or data deletion requests, contact:</p>
                     <p><strong>Email:</strong> <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a></p>
                 </div>
             </section>
 
             <section id="zh" class="section">
                 <h1>隐私政策</h1>
-                <p class="lead">本政策说明 Co-work 会处理哪些信息、处理目的是什么、订阅数据如何处理，以及你如何申请删除数据或联系支持。</p>
-                <p class="last-updated">最后更新日期：2026 年 7 月 5 日</p>
+                <p class="lead">本政策说明 Co-work 会处理哪些信息、与哪些第三方服务商共享数据、AI 数据共享授权与内容举报如何运作，以及你如何管理或删除自己的数据。</p>
+                <p class="last-updated">最后更新日期：2026 年 11 月 25 日</p>
 
                 <div class="notice">
-                    <p><strong>摘要：</strong>Co-work 采用匿名设备账号模式。为了提供 AI 对话、Mac Agent 任务、助手、图像生成、反馈处理、积分和订阅验证服务，我们会处理你主动提交的内容以及必要的技术和交易信息。</p>
+                    <p><strong>摘要：</strong>Co-work 采用匿名设备账号模式。在你首次发起 AI 请求前，应用会征求你的明确同意，说明你主动提交的提示词、文件、图片及必要上下文将经由后台发送给第三方 AI 中转服务和模型厂商；你可以随时在应用设置中查看或关闭授权。我们不会出售你的个人信息，也不会进行跨应用或跨网站的广告追踪。</p>
                 </div>
 
                 <h2>1. 适用范围</h2>
-                <p>本隐私政策适用于 Co-work 应用及相关后台服务，包括 iOS、iPadOS、macOS 版本，以及用于提供聊天、Mac Agent 任务、助手、图像生成、反馈、积分、Apple 自动续费订阅等功能的服务。</p>
+                <p>本隐私政策适用于 iOS、iPadOS 和 macOS 平台的 Co-work 应用（包括 App Store 版与 Mac 官网版）及相关后台服务，覆盖 AI 对话、联网搜索、网页读取与文档解析、Mac Agent 任务、助手、图像生成、AI 内容举报、反馈、积分及 Apple 自动续费订阅等功能。</p>
 
                 <h2>2. 我们处理的信息</h2>
-                <p>根据你的使用方式，我们可能处理以下类别的信息：</p>
+                <p>根据你实际使用的功能，我们可能处理以下类别的信息：</p>
                 <ul>
-                    <li>匿名账号和设备标识，例如本地生成并保存的设备标识，以及与其绑定的内部用户 ID。</li>
-                    <li>鉴权和账号状态信息，例如访问令牌、会员状态、积分和使用计数。</li>
-                    <li>聊天和助手内容，包括你提交的提示词、会话标题、消息历史、所选模型，以及完成服务所需的助手上下文。</li>
-                    <li>Mac Agent 任务内容，包括你提交的任务指令、所选工作区、权限模式、工具或命令输出、本地文件路径、文件名、元数据，以及当你要求 Agent 检查、总结、编辑或创建文件时所需的相关文件内容。</li>
-                    <li>上传或引用内容，包括你为视觉对话或图像生成提交的图片、参考图片，以及你选择或指示 Mac Agent 处理的文件或文件夹。</li>
-                    <li>图像生成请求数据，例如提示词、可选参考图片、所选尺寸、质量参数以及返回给你的生成结果。</li>
-                    <li>保存在你设备本地的应用设置，例如所选语言、所选模型、工作区、工作模式和权限偏好。</li>
-                    <li>反馈数据，包括你在应用内提交的可选邮箱地址和反馈内容。</li>
-                    <li>订阅和购买验证记录，包括 Apple 商品标识、交易号、原始交易号、签名交易信息或回执、环境信息、到期信息，以及用于将购买绑定到 Co-work 账号的 app account token。</li>
-                    <li>安全和风控数据，例如用于限流、防滥用、稳定性和问题排查的 IP 地址及请求元数据。</li>
+                    <li><strong>匿名账号与设备标识：</strong>本机生成的设备标识、与其关联的内部匿名用户 ID 及访问鉴权令牌。</li>
+                    <li><strong>账号、会员与积分状态：</strong>会员档位、积分余额、使用计数与积分账本记录。</li>
+                    <li><strong>对话、搜索与文档内容：</strong>你提交的提示词、会话标题、消息历史、所选模型、助手上下文、你要求读取的网页链接、附加的图片或文档（如 PDF、Word、PPT），以及返回给你的 AI 回复。</li>
+                    <li><strong>语音输入（iOS）：</strong>当你在 iOS 上使用语音转文字输入时，语音会通过 Apple 系统语音识别框架实时转写为文本，供你确认后发送。</li>
+                    <li><strong>Mac Agent 任务内容：</strong>你提交的任务指令、所选工作区、权限模式、工具或命令输出、本地文件路径、元数据，以及仅在你主动选择或授权 Agent 检查、总结、编辑或创建文件时的相关文件内容。本地工作区文件保留在你的 Mac 本机，不会在未经任务授权时上传。</li>
+                    <li><strong>图像生成数据：</strong>生图提示词、可选参考图片、尺寸/分辨率/质量参数以及生成的图片结果。</li>
+                    <li><strong>内容举报与反馈数据：</strong>举报对象标识、举报原因、选填补充说明、被举报 AI 回复的必要摘录、生成的工单编号（<code>CR-...</code>），以及你在反馈中提交的内容和可选联系邮箱。</li>
+                    <li><strong>本机应用设置：</strong>语言偏好、所选模型、AI 数据共享授权状态、工作区配置及权限偏好等保存在设备本地的数据。</li>
+                    <li><strong>订阅与购买验证记录：</strong>Apple 商品标识、交易号、原始交易号、签名交易信息或回执、环境信息、到期时间，以及用于将购买绑定至匿名账号的 app account token。我们不会获取你的完整银行卡号或支付密码。</li>
+                    <li><strong>推送设备令牌（iOS）：</strong>在 iOS 正式版中，若你开启通知权限，我们会处理 Apple 推送通知服务（APNs）设备令牌，用于在后台生成回复完成后向你发送提醒。</li>
+                    <li><strong>产品分析与安全风控数据：</strong>不含聊天正文的脱敏产品交互事件、会员状态、故障诊断信息，以及用于限流、请求签名校验、反欺诈与服务稳定性的 IP 地址和请求元数据。你的提示词、聊天记录和文件内容绝不会发送给产品分析工具。</li>
                 </ul>
 
                 <h2>3. 我们如何使用这些信息</h2>
-                <p>我们处理这些信息是为了运行和改进 Co-work，具体包括：</p>
+                <p>我们仅在运行、保障与改进 Co-work 所需的范围内使用上述信息，包括：</p>
                 <ul>
-                    <li>创建并维护你的匿名应用内账号。</li>
-                    <li>提供 AI 对话、助手、Mac Agent、文件处理和图像生成功能。</li>
-                    <li>为同一匿名账号保存并同步会话历史。</li>
-                    <li>验证购买、恢复订阅并更新会员权益。</li>
-                    <li>响应支持和反馈请求。</li>
-                    <li>防止滥用、未授权使用和技术故障。</li>
-                    <li>维护服务性能、调试能力和产品稳定性。</li>
+                    <li>创建并维护匿名应用账号、会员权益与积分余额。</li>
+                    <li>在你同意 AI 数据共享授权后，提供 AI 对话、联网搜索、网页读取、文档解析、助手、Mac Agent 及图像生成服务。</li>
+                    <li>为你的匿名账号保存和同步会话历史与生成结果。</li>
+                    <li>受理 AI 内容举报，立即从你的界面与历史中移除被举报内容，并将被举报回复排除在后续模型上下文之外。</li>
+                    <li>验证购买、恢复订阅、处理续费与升降档，并维护必要的账务及反欺诈记录。</li>
+                    <li>在 iOS 端开启通知权限时，推送后台回复完成提醒。</li>
+                    <li>监测产品性能、排查技术故障、防范滥用行为，以及回复你的支持与数据删除请求。</li>
                 </ul>
 
-                <h2>4. 订阅和支付信息</h2>
-                <p>订阅支付由 Apple 通过应用内购买完成。我们不会接收你的完整银行卡支付信息。当你购买、续费或恢复订阅时，我们会处理 Apple 提供的交易数据，用于验证购买、同步正确的会员状态，并保留必要的记账、风控和客服支持记录。</p>
+                <h2>4. 订阅与支付信息</h2>
+                <p>订阅支付由 Apple 通过应用内购买（In-App Purchase）完成。我们不会接收你的完整银行卡信息。当你购买、续订、升级或恢复订阅时，我们会处理 Apple 提供的交易数据，以核验购买有效性、同步会员与积分权益，并保留必要的账务、风控与客服支持记录。</p>
 
-                <h2>5. 与第三方的共享</h2>
-                <p>我们只会在运营 Co-work 所必需的范围内，与服务提供商共享有限数据：</p>
+                <h2>5. 第三方服务商与数据共享</h2>
+                <p>我们仅在提供对应功能所必需的范围内，向以下第三方服务商传输或共享数据：</p>
+
+                <h3>5.1 AI 中转服务与大模型厂商</h3>
+                <p>仅在你明确同意应用内 AI 数据共享授权后，你主动提交的提示词、必要上下文、所选图片或文件、网页链接及任务参数会先经过 Co-work 后台，并按你选择的模型或功能发送给以下第三方服务商：</p>
                 <ul>
-                    <li>用于生成聊天、Agent、文件处理和图像结果的 AI 处理服务提供商。</li>
-                    <li>Apple，用于应用内购买处理、订阅验证和订阅状态通知。</li>
-                    <li>帮助我们运行服务的基础设施、托管、数据库和安全服务提供商。</li>
+                    <li><strong>API 中转服务（3 家）：</strong>
+                        <ul>
+                            <li><strong>ZenMux</strong>（<a href="https://zenmux.ai" target="_blank" rel="noopener noreferrer">zenmux.ai</a>）：转发所支持模型的 AI 对话、联网搜索及 Mac Agent 请求。</li>
+                            <li><strong>OpenRouter</strong>（<a href="https://openrouter.ai" target="_blank" rel="noopener noreferrer">openrouter.ai</a>）：按服务配置与地区路由转发所支持模型的对话与联网搜索请求。</li>
+                            <li><strong>Kie.ai（NEXUSAI SERVICES LLC）</strong>（<a href="https://kie.ai" target="_blank" rel="noopener noreferrer">kie.ai</a>）：处理图像生成（如 GPT Image 2）及参考图片上传。</li>
+                        </ul>
+                    </li>
+                    <li><strong>大模型厂商（8 家）：</strong>
+                        <ul>
+                            <li><strong>经中转服务调用：</strong><strong>OpenAI</strong>（GPT 对话与生图模型）、<strong>Anthropic</strong>（Claude 对话与 Agent 模型）、<strong>Google</strong>（Gemini 模型及联网搜索）。</li>
+                            <li><strong>后端直连调用：</strong><strong>DeepSeek</strong>（对话、Mac Agent、网页抓取及文档 OCR/解析）、<strong>智谱 AI（Zhipu AI）</strong>（GLM 系列模型）、<strong>月之暗面（Moonshot AI）</strong>（Kimi 系列模型）、<strong>MiniMax</strong>（MiniMax 系列模型）、<strong>小米（Xiaomi）</strong>（MiMo 系列模型）。</li>
+                        </ul>
+                    </li>
                 </ul>
-                <p>我们不会出售你的个人信息。</p>
+                <p>上述服务商接收数据仅用于为你生成回复、搜索摘要、文档解析结果、图片或 Agent 输出。我们会审查服务商的数据保护条款，不授权其将数据用于跨公司广告投放。请勿在请求中提交完成任务并不需要的高度敏感个人信息。</p>
 
-                <h2>6. 数据保留</h2>
-                <p>我们会在提供服务、维护订阅记录、解决争议、防止滥用和履行法律义务所合理需要的期限内保留数据。</p>
+                <h3>5.2 Apple 服务</h3>
                 <ul>
-                    <li>会话历史会保留到你在应用内删除，或你提出关联账号删除请求为止；但在法律或安全需要的范围内，我们可能保留有限记录。</li>
-                    <li>生成图片记录和 Agent 任务记录可能作为会话或任务历史的一部分保留，直到你请求删除，或应用内支持删除为止。</li>
-                    <li>反馈提交内容可能会保留，用于回复你的请求并维护支持历史。</li>
-                    <li>订阅验证和交易记录可能会出于记账、反欺诈和合规目的继续保留。</li>
-                    <li>安全和限流相关元数据可能会保留一段有限的运营周期。</li>
+                    <li><strong>App Store 与 StoreKit：</strong>用于应用内购买、订阅核验、恢复购买及订阅状态通知。</li>
+                    <li><strong>Apple 推送通知服务（APNs）：</strong>在 iOS 正式版开启通知权限后，用于推送后台完成回复的通知。</li>
+                    <li><strong>Apple 系统语音识别：</strong>在 iOS 端使用语音输入时，通过系统语音识别框架将语音转写为文字。</li>
                 </ul>
 
-                <h2>7. 你的选择与删除申请</h2>
+                <h3>5.3 统计与分析服务</h3>
                 <ul>
-                    <li>在应用支持该功能的地方，你可以直接删除单条会话。</li>
-                    <li>你可以发送邮件到 <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a> 申请删除与你账号关联的数据。</li>
-                    <li>你可以在 Apple ID 的订阅设置中管理或取消订阅。</li>
-                    <li>你可以选择不填写可选的反馈邮箱，但某些功能必须处理你提交的内容才能正常工作。</li>
+                    <li><strong>Google Firebase Analytics（仅 iOS 正式版）：</strong>在 iOS App Store 正式版中用于统计应用功能使用事件（如页面访问、功能交互、会员状态）及衡量产品稳定性。提示词、聊天正文、AI 回复及用户文件内容<strong>绝不会</strong>发送至 Firebase Analytics。</li>
+                    <li><strong>Co-work 自建分析：</strong>向 Co-work 自有后端上报脱敏的产品交互事件与错误诊断（不含提示词、聊天正文与文件内容）。在 macOS 上，可选产品分析对新用户默认关闭，你可随时在设置中开关。</li>
                 </ul>
 
-                <h2>8. 数据安全</h2>
-                <p>我们会采取合理的管理和技术措施来保护所处理的数据。但任何系统都无法保证绝对安全，因此除非确有必要，请不要提交高度敏感的信息。</p>
+                <h3>5.4 云基础设施与法律要求</h3>
+                <ul>
+                    <li><strong>Cloudflare：</strong>为 Co-work 提供后端计算（Workers）、数据库（D1）、附件与图片对象存储（R2）及边缘安全路由能力。</li>
+                    <li><strong>法律或安全要求：</strong>在适用法律、合法程序要求，或为保护用户与服务安全所必需时，我们可能披露有限信息。</li>
+                </ul>
+                <p><strong>我们不会出售你的个人信息，也不将收集的信息用于跨公司广告追踪。</strong></p>
 
-                <h2>9. 跨境处理</h2>
-                <p>当基础设施、AI 服务或支付相关服务提供商有需要时，你的数据可能会在你所在国家或地区之外被处理。</p>
+                <h2>6. AI 数据共享控制与内容举报</h2>
+                <ul>
+                    <li><strong>明确授权与随时撤回：</strong>首次发送 AI 请求前，Co-work 会弹窗说明发送的数据范围及第三方 AI 服务商。你可选择暂不同意而不影响查看设置或管理订阅，也可随时在 <strong>iOS（我的 &rarr; 数据共享）</strong> 或 <strong>macOS（设置 &rarr; 隐私）</strong> 中重新授权或关闭。关闭后，在重新授权前不会再向 AI 服务商发送新的提示词、图片或文件。</li>
+                    <li><strong>内容举报与即时移除：</strong>每条 AI 文本回复、Agent 回复及生成图片均提供「举报」入口。提交后，该内容会立即从界面与历史记录中移除并显示工单号（<code>CR-...</code>），刷新或重启后保持移除状态，且不会再进入后续模型上下文。在 macOS 上，举报 Agent 回复不会修改或删除你本地工作区中的文件。</li>
+                </ul>
 
-                <h2>10. 儿童隐私</h2>
-                <p>Co-work 并非面向 13 岁以下儿童，我们也不会故意收集 13 岁以下儿童的个人信息。如果你认为儿童向我们提供了个人信息，请联系我们，以便我们进行审核并在适当情况下删除相关信息。</p>
+                <h2>7. 数据保留与删除</h2>
+                <p>我们仅在提供服务、维护订阅记录、处理内容举报、防范滥用及履行法律义务所合理需要的期限内保留数据：</p>
+                <ul>
+                    <li>会话历史、生成图片记录及 Agent 任务记录会保留至你在应用内删除或申请删除账号为止。</li>
+                    <li>内容举报记录与反馈提交内容可能会保留一段合理期限，用于安全审核、反滥用与支持跟进。</li>
+                    <li>订阅核验、账务与反欺诈记录可能会按合规与财务要求继续保留。</li>
+                    <li>若删除匿名账号时仍有有效 Apple 订阅，为便于你在新匿名账号中恢复权益，我们仅保留原始交易号与 app account token 的不可逆 HMAC 指纹（不含原始交易号、聊天或文件内容），并在恢复后标记为已使用。</li>
+                    <li>安全与限流元数据仅在有限运营周期内保留。</li>
+                </ul>
 
-                <h2>11. 政策更新</h2>
-                <p>我们可能会不时更新本隐私政策。如有重要更新，我们会通过修改本页面的“最后更新日期”进行反映。</p>
+                <h2>8. 你的选择与删除申请</h2>
+                <ul>
+                    <li>你可以随时在应用设置中开启或关闭第三方 AI 数据共享授权。</li>
+                    <li>你可以直接在应用内举报并移除任意 AI 生成的消息或图片。</li>
+                    <li>你可以在应用内删除单条会话；在 macOS 上还可通过 <strong>设置 &rarr; 账号</strong> 直接发起匿名账号及关联后台数据删除。</li>
+                    <li>你也可以发送邮件至 <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a> 提出数据访问、隐私咨询或删除申请（如方便请附应用内匿名用户或设备标识；请勿发送密码或银行卡号）。</li>
+                    <li>你可以在 <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener noreferrer">Apple 订阅设置</a> 中管理或取消订阅。</li>
+                </ul>
+
+                <h2>9. 数据安全</h2>
+                <p>我们采取合理的技术与管理措施保护所处理的数据，包括全链路加密传输（HTTPS/TLS）、请求签名校验与访问权限控制。但任何系统都无法保证绝对安全，请尽量避免提交非必需的高度敏感个人信息。</p>
+
+                <h2>10. 跨境处理</h2>
+                <p>由于云基础设施、第三方 AI 及支付服务商的服务器分布在不同地区，你的数据可能会在你所在国家或地区之外被处理。</p>
+
+                <h2>11. 儿童隐私</h2>
+                <p>Co-work 并非面向 13 岁以下儿童，我们不会故意收集 13 岁以下儿童的个人信息。如果你认为儿童向我们提供了个人信息，请联系我们以便审核并妥善删除。</p>
+
+                <h2>12. 政策更新</h2>
+                <p>我们可能随产品功能、服务商或法律要求的变化更新本政策。更新后会同步修改页面顶部的“最后更新日期”；重大变化会在适当位置提供额外提示。</p>
 
                 <div class="contact-card">
-                    <h2>12. 联系我们</h2>
-                    <p>如果你对隐私、支持或数据删除申请有任何问题，请联系：</p>
+                    <h2>13. 联系我们</h2>
+                    <p>如果你对隐私保护、支持或数据删除申请有任何问题，请联系：</p>
                     <p><strong>邮箱：</strong> <a href="mailto:ify0222yfi@gmail.com">ify0222yfi@gmail.com</a></p>
                 </div>
             </section>
@@ -456,6 +537,15 @@
             });
             button.classList.add("active");
         }
+
+        (function initLanguage() {
+            const params = new URLSearchParams(window.location.search);
+            const hash = window.location.hash.replace("#", "").toLowerCase();
+            const requested = (params.get("lang") || hash || "").toLowerCase();
+            if (requested === "zh" || requested === "zh-cn" || requested === "zh-hans") {
+                switchLanguage("zh", document.getElementById("btn-zh"));
+            }
+        })();
     </script>
 </body>
 </html>
